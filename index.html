@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Kumar Konduri | Senior Software Developer</title>
+    <meta name="description" content="Portfolio of Mahesh Kumar Konduri - Senior Software Developer with 8+ years of experience in cloud-native applications, microservices, and enterprise solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cinzel:wght@400;500;600;700&family=Raleway:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Animated Background Grid -->
+    <div class="bg-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Mahesh Kumar">
+                <svg class="nav-logo-svg" viewBox="0 0 60 60" width="56" height="56">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#c9a96e"/>
+                            <stop offset="50%" style="stop-color:#e8d5a3"/>
+                            <stop offset="100%" style="stop-color:#c9a96e"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Diamond frame -->
+                    <rect x="10" y="10" width="40" height="40" rx="2" fill="none" stroke="url(#logoGrad)" stroke-width="1" transform="rotate(45 30 30)"/>
+                    <!-- Inner circle -->
+                    <circle cx="30" cy="30" r="18" fill="none" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+                    <!-- M letter -->
+                    <path d="M 18 40 L 18 22 L 25 34 L 30 24 L 35 34 L 30 24" fill="none" stroke="url(#logoGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- K letter -->
+                    <path d="M 33 40 L 33 22 M 33 31 L 42 22 M 33 31 L 42 40" fill="none" stroke="url(#logoGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Awards</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-particles" id="particles"></div>
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <!-- Graphical MK Signature Monogram -->
+            <div class="hero-monogram">
+                <svg viewBox="0 0 200 200" class="monogram-svg">
+                    <defs>
+                        <linearGradient id="mkGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#c9a96e"/>
+                            <stop offset="50%" style="stop-color:#e8d5a3"/>
+                            <stop offset="100%" style="stop-color:#c9a96e"/>
+                        </linearGradient>
+                        <linearGradient id="mkGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#a07d3f"/>
+                            <stop offset="100%" style="stop-color:#e8d5a3"/>
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Outer diamond frame -->
+                    <rect x="30" y="30" width="140" height="140" rx="4" fill="none" stroke="url(#mkGrad1)" stroke-width="1.2" transform="rotate(45 100 100)" class="ring-outer"/>
+                    <!-- Decorative corner dots on diamond -->
+                    <circle cx="100" cy="2" r="3" fill="url(#mkGrad1)" opacity="0.8"/>
+                    <circle cx="198" cy="100" r="3" fill="url(#mkGrad1)" opacity="0.8"/>
+                    <circle cx="100" cy="198" r="3" fill="url(#mkGrad1)" opacity="0.8"/>
+                    <circle cx="2" cy="100" r="3" fill="url(#mkGrad1)" opacity="0.8"/>
+                    <!-- Inner circle -->
+                    <circle cx="100" cy="100" r="60" fill="none" stroke="url(#mkGrad2)" stroke-width="0.8" opacity="0.5"/>
+                    <!-- Inner decorative ring -->
+                    <circle cx="100" cy="100" r="55" fill="none" stroke="url(#mkGrad1)" stroke-width="0.4" stroke-dasharray="2 4" opacity="0.3" class="ring-inner"/>
+                    <!-- M Letter - elegant geometric -->
+                    <path d="M 62 130 L 62 72 L 78 105 L 92 76 L 106 105 L 92 76" fill="none" stroke="url(#mkGrad1)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" class="mk-text"/>
+                    <!-- K Letter - elegant geometric -->
+                    <path d="M 110 130 L 110 72" fill="none" stroke="url(#mkGrad1)" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" class="mk-text"/>
+                    <path d="M 110 100 L 138 72" fill="none" stroke="url(#mkGrad1)" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)"/>
+                    <path d="M 110 100 L 138 130" fill="none" stroke="url(#mkGrad1)" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)"/>
+                    <!-- Decorative separator line -->
+                    <line x1="70" y1="140" x2="130" y2="140" stroke="url(#mkGrad1)" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+                    <!-- Tiny accent lines at corners -->
+                    <line x1="40" y1="45" x2="55" y2="45" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="40" y1="45" x2="40" y2="60" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="160" y1="45" x2="145" y2="45" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="160" y1="45" x2="160" y2="60" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="40" y1="155" x2="55" y2="155" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="40" y1="155" x2="40" y2="140" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="160" y1="155" x2="145" y2="155" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="160" y1="155" x2="160" y2="140" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+            </div>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">Mahesh Kumar<br>Konduri</span>
+            </h1>
+            <p class="hero-subtitle">Senior Software Developer</p>
+            <p class="hero-description">
+                8+ years crafting enterprise-grade cloud-native applications.<br>
+                Bridging technical excellence with strategic business vision.
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary"><span>Get In Touch</span><i class="fas fa-arrow-right"></i></a>
+                <a href="#experience" class="btn btn-outline"><span>View My Work</span><i class="fas fa-chevron-down"></i></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="26" fill="none" stroke="rgba(201,169,110,0.1)" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="26" fill="none" stroke="url(#mkGrad1)" stroke-width="2" stroke-dasharray="163" stroke-dashoffset="30" stroke-linecap="round" class="stat-circle"/>
+                        </svg>
+                    </div>
+                    <span class="stat-number" data-count="8">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="26" fill="none" stroke="rgba(201,169,110,0.1)" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="26" fill="none" stroke="url(#mkGrad1)" stroke-width="2" stroke-dasharray="163" stroke-dashoffset="50" stroke-linecap="round" class="stat-circle"/>
+                        </svg>
+                    </div>
+                    <span class="stat-number" data-count="40">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Clients Onboarded</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="26" fill="none" stroke="rgba(201,169,110,0.1)" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="26" fill="none" stroke="url(#mkGrad1)" stroke-width="2" stroke-dasharray="163" stroke-dashoffset="80" stroke-linecap="round" class="stat-circle"/>
+                        </svg>
+                    </div>
+                    <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Enterprise Clients</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Crafting Digital Excellence</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-lead">
+                        I am a Software Developer with <strong>8+ years</strong> of hands-on experience designing, developing, and delivering enterprise-grade applications across multiple industries.
+                    </p>
+                    <p>
+                        I hold a Bachelor's and Master's degree in Computer Science Engineering, along with an MBA in Information Technology — giving me a unique blend of technical expertise, engineering principles, and business strategy.
+                    </p>
+                    <p>
+                        My expertise spans cloud platforms (AWS, Kubernetes, OpenShift), API development, microservices architecture, CI/CD automation, performance tuning, and modern DevOps practices. I also bring technical leadership experience — mentoring engineers, guiding development teams, and collaborating across functions to drive architecture decisions.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Champion</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>FinOps Lead</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Initiatives Lead</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Migration Expert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="images/personal/IMG_5185.jpg" alt="Mahesh Kumar Konduri" class="profile-photo">
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="image-dots"></div>
+                    <div class="image-glow"></div>
+                    <div class="floating-card card-1">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Cloud</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security Lead</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Innovator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <!-- Delta Air Lines -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Delta Air Lines</h3>
+                                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</span>
+                            </div>
+                            <span class="timeline-date">Jul 2022 – Present</span>
+                        </div>
+                        <span class="timeline-role">Software Developer</span>
+                        <div class="timeline-projects">
+                            <div class="project-card">
+                                <h4><i class="fas fa-cloud-upload-alt"></i> Cloud Migration (NexGen)</h4>
+                                <p>Migrated legacy applications from on-premises to AWS. Modernized Spring Boot apps, containerized services on OpenShift, established CI/CD pipelines, and migrated Oracle databases to PostgreSQL.</p>
+                                <div class="project-tags">
+                                    <span>AWS</span><span>OpenShift</span><span>Kafka → MSK</span><span>PostgreSQL</span><span>GitLab CI/CD</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-plane"></i> Cargo Operational Services – DeltaCargo.com</h4>
+                                <p>Led customer onboarding and API integration for Shopping, Booking, and Tracking services. Successfully onboarded 40+ customers in 2 years, expanding API consumer utilization.</p>
+                                <div class="project-tags">
+                                    <span>REST APIs</span><span>API Gateway</span><span>S3</span><span>Spring Boot</span><span>Swagger</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-robot"></i> AI Initiatives – Intelligent Agents</h4>
+                                <p>Designed AI-driven agents for production monitoring, automated onboarding, and intelligent API testing — improving operational efficiency and developer productivity.</p>
+                                <div class="project-tags">
+                                    <span>AI Agents</span><span>Monitoring</span><span>Automation</span><span>OpenAPI</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-shield-alt"></i> Security Champion & FinOps Lead</h4>
+                                <p>Drove secure coding practices using Wiz, remediated critical vulnerabilities, and led FinOps initiatives with Codability to optimize cloud spend and resource efficiency.</p>
+                                <div class="project-tags">
+                                    <span>Wiz</span><span>Veracode</span><span>FinOps</span><span>Codability</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expedent Corp -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Expedent Corp</h3>
+                                <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Irving, TX</span>
+                            </div>
+                            <span class="timeline-date">Apr 2017 – Jul 2022</span>
+                        </div>
+                        <span class="timeline-role">Software Developer</span>
+                        <div class="timeline-projects">
+                            <div class="project-card">
+                                <h4><i class="fas fa-plane-departure"></i> Delta Airlines (ENS, BSOC, RM Teams)</h4>
+                                <p>Contributed to Upgrade Management System and Seat Change Notification Engine. Developed Spring Boot microservices with REST APIs, integrated IBM MQ and Kafka for event-driven processing.</p>
+                                <div class="project-tags">
+                                    <span>Spring Boot</span><span>IBM MQ</span><span>Kafka</span><span>Microservices</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-graduation-cap"></i> Parchment</h4>
+                                <p>Built cloud-based applications for the Robo Service Management platform, supporting global institutions with digital credential exchange and high-volume transcript processing.</p>
+                                <div class="project-tags">
+                                    <span>Cloud</span><span>Java</span><span>Scalability</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fas fa-university"></i> Wells Fargo</h4>
+                                <p>Developed REST APIs to automate mortgage data retrieval and improve processing efficiency on the WFCI (DTDS) platform.</p>
+                                <div class="project-tags">
+                                    <span>REST APIs</span><span>Finance</span><span>Automation</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h4><i class="fab fa-java"></i> IBM – New York</h4>
+                                <p>Developed enterprise applications using Java (Spring, Hibernate, MVC) on monolithic architectures deployed on JBoss/WebSphere with CI/CD via Jenkins.</p>
+                                <div class="project-tags">
+                                    <span>Java</span><span>Spring</span><span>Hibernate</span><span>Jenkins</span><span>JBoss</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">C/C++</span>
+                        <span class="skill-pill">Kotlin</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <span class="skill-pill">AWS (ROSA)</span>
+                        <span class="skill-pill">Kubernetes</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">OpenShift</span>
+                        <span class="skill-pill">CloudFormation</span>
+                        <span class="skill-pill">GitLab CI/CD</span>
+                        <span class="skill-pill">Lambda</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases</h3>
+                    <div class="skill-items">
+                        <span class="skill-pill">Oracle</span>
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">RDS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-pill">Spring Boot</span>
+                        <span class="skill-pill">Apache Kafka</span>
+                        <span class="skill-pill">MSK</span>
+                        <span class="skill-pill">REST APIs</span>
+                        <span class="skill-pill">Swagger/OpenAPI</span>
+                        <span class="skill-pill">Apigee</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Monitoring & Observability</h3>
+                    <div class="skill-items">
+                        <span class="skill-pill">CloudWatch</span>
+                        <span class="skill-pill">Prometheus</span>
+                        <span class="skill-pill">Dynatrace</span>
+                        <span class="skill-pill">Grafana</span>
+                        <span class="skill-pill">Loki</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Security & Methodology</h3>
+                    <div class="skill-items">
+                        <span class="skill-pill">Veracode</span>
+                        <span class="skill-pill">Wiz</span>
+                        <span class="skill-pill">Agile/Scrum</span>
+                        <span class="skill-pill">Kanban</span>
+                        <span class="skill-pill">FinOps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / AI Initiatives Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Innovation</span>
+                <h2 class="section-title">AI & Automation Initiatives</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-showcase">
+                    <div class="project-showcase-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>On-Call Monitoring Agent</h3>
+                    <p>AI-powered agent that proactively monitors production environments across multiple AWS accounts. Performs real-time anomaly detection, log analysis, and health diagnostics — significantly reducing MTTD and MTTR.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Monitors</span>
+                            <span class="metric-value">MSK, API GW, MQ</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Impact</span>
+                            <span class="metric-value">Reduced MTTD/MTTR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-showcase">
+                    <div class="project-showcase-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Automated Onboarding Agent</h3>
+                    <p>Automated onboarding agent to provision user/vendor access and manage API catalog authorization — ensuring secure, consistent, and efficient access management at scale.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Function</span>
+                            <span class="metric-value">Access Provisioning</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Benefit</span>
+                            <span class="metric-value">Consistent & Secure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-showcase">
+                    <div class="project-showcase-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Intelligent API Testing Agent</h3>
+                    <p>AI-based testing agent that consumes Swagger/OpenAPI specs to auto-generate and execute end-to-end tests, providing reports, issue detection, and recommended fixes.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Input</span>
+                            <span class="metric-value">OpenAPI/Swagger</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Output</span>
+                            <span class="metric-value">Auto E2E Tests</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Recognition</span>
+                <h2 class="section-title">Achievements & Awards</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card featured">
+                    <div class="achievement-badge">
+                        <svg viewBox="0 0 100 100" class="trophy-svg">
+                            <defs>
+                                <linearGradient id="trophyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#c9a96e"/>
+                                    <stop offset="50%" style="stop-color:#e8d5a3"/>
+                                    <stop offset="100%" style="stop-color:#c9a96e"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Trophy shape -->
+                            <path d="M35 25 H65 V28 C65 28 72 30 72 38 C72 46 65 48 65 48 V50 C65 60 55 65 50 68 C45 65 35 60 35 50 V48 C35 48 28 46 28 38 C28 30 35 28 35 28 Z" fill="none" stroke="url(#trophyGrad)" stroke-width="2"/>
+                            <!-- Star on trophy -->
+                            <polygon points="50,32 53,40 61,40 55,45 57,53 50,49 43,53 45,45 39,40 47,40" fill="url(#trophyGrad)" opacity="0.8"/>
+                            <!-- Base -->
+                            <rect x="42" y="70" width="16" height="4" rx="2" fill="url(#trophyGrad)" opacity="0.6"/>
+                            <rect x="38" y="76" width="24" height="4" rx="2" fill="url(#trophyGrad)" opacity="0.4"/>
+                            <!-- Sparkles -->
+                            <circle cx="25" cy="30" r="1.5" fill="url(#trophyGrad)" opacity="0.6" class="sparkle"/>
+                            <circle cx="75" cy="30" r="1.5" fill="url(#trophyGrad)" opacity="0.6" class="sparkle"/>
+                            <circle cx="50" cy="15" r="1.5" fill="url(#trophyGrad)" opacity="0.6" class="sparkle"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-label">
+                            <i class="fas fa-award"></i>
+                            <span>Chairman's Club Nominee</span>
+                        </div>
+                        <h3>Delta Air Lines Chairman's Club</h3>
+                        <p class="achievement-description">
+                            Nominated for the prestigious Delta Air Lines Chairman's Club — a recognition that highlights strong work ethic, alignment with company values, and outstanding community contributions. This peer-nominated award acknowledges those who truly embody the Delta Difference.
+                        </p>
+                        <div class="achievement-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <span>"Congratulations on your nomination for Chairman's Club. Thank you for being the Delta Difference!"</span>
+                        </div>
+                        <div class="achievement-tags">
+                            <span><i class="fas fa-star"></i> Leadership</span>
+                            <span><i class="fas fa-users"></i> Teamwork</span>
+                            <span><i class="fas fa-heart"></i> Community</span>
+                            <span><i class="fas fa-trophy"></i> Excellence</span>
+                        </div>
+                    </div>
+                    <!-- Certificate images -->
+                    <div class="achievement-visual">
+                        <div class="certificate-gallery">
+                            <div class="certificate-frame">
+                                <img src="images/IMG_4868.JPG" alt="Delta Chairman's Club Certificate" loading="lazy">
+                            </div>
+                            <div class="certificate-frame">
+                                <img src="images/IMG_4869.JPG" alt="Delta Chairman's Club Recognition" loading="lazy">
+                            </div>
+                            <div class="certificate-frame">
+                                <img src="images/IMG_5569.jpeg" alt="Chairman's Club Award Ceremony" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security Domain Champion</h3>
+                    <p>Recognized as the Domain Champion for the Cargo domain for advancing security standards, promoting secure coding practices, and driving vulnerability remediation.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>40+ Clients Onboarded</h3>
+                    <p>Successfully onboarded over 40 external customers within 2 years, expanding API consumer adoption for Delta Cargo's Shopping and Booking services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Education</span>
+                <h2 class="section-title">Academic Foundation</h2>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Master of Science in Computer Science</h3>
+                    <span class="edu-school">University of SFBU</span>
+                    <p class="edu-desc">Advanced studies in computer science theory, algorithms, and system design.</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>MBA – Information Technology</h3>
+                    <span class="edu-school">Osmania University</span>
+                    <p class="edu-desc">Business strategy and management with IT specialization.</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>B.Tech – Computer Science Engineering</h3>
+                    <span class="edu-school">JNTUH University</span>
+                    <p class="edu-desc">Foundational engineering education in computer science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Gallery Section -->
+    <section class="section personal-gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Beyond Code</span>
+                <h2 class="section-title">Life & Moments</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-large">
+                    <img src="images/personal/IMG_6842.JPG" alt="Personal moment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/personal/7014491d-59e7-4688-a714-f4019c5bb415.JPG" alt="Personal moment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/personal/IMG_5185.jpg" alt="Personal moment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-lead">I'm always open to discussing new projects, creative ideas, or opportunities to be part of something great.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Atlanta, GA</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mkonduri7@gmail.com">mkonduri7@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+16692648925">(669) 264-8925</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mahesh-kumar-konduri-22948614a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:mkonduri7@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required placeholder=" ">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 60 60" width="56" height="56">
+                            <defs>
+                                <linearGradient id="footerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#c9a96e"/>
+                                    <stop offset="50%" style="stop-color:#e8d5a3"/>
+                                    <stop offset="100%" style="stop-color:#c9a96e"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="10" y="10" width="40" height="40" rx="2" fill="none" stroke="url(#footerGrad)" stroke-width="1" transform="rotate(45 30 30)"/>
+                            <circle cx="30" cy="30" r="18" fill="none" stroke="url(#footerGrad)" stroke-width="0.5" opacity="0.4"/>
+                            <path d="M 18 40 L 18 22 L 25 34 L 30 24 L 35 34 L 30 24" fill="none" stroke="url(#footerGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M 33 40 L 33 22 M 33 31 L 42 22 M 33 31 L 42 40" fill="none" stroke="url(#footerGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="footer-quote">"Building enterprise solutions with the precision of an engineer and the vision of a strategist."</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="#achievements">Awards</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-connect">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/mahesh-kumar-konduri-22948614a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:mkonduri7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p class="footer-location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</p>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mahesh Kumar Konduri. All rights reserved.</p>
+                <a href="#hero" class="back-to-top" aria-label="Back to top">
+                    <i class="fas fa-chevron-up"></i>
+                    <span>Back to Top</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
