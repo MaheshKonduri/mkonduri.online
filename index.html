@@ -113,10 +113,6 @@
                     <line x1="160" y1="155" x2="160" y2="140" stroke="url(#mkGrad1)" stroke-width="0.8" opacity="0.4"/>
                 </svg>
             </div>
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Available for opportunities
-            </div>
             <h1 class="hero-title">
                 <span class="hero-greeting">Hello, I'm</span>
                 <span class="hero-name">Mahesh Kumar<br>Konduri</span>
@@ -128,7 +124,7 @@
             </p>
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary"><span>Get In Touch</span><i class="fas fa-arrow-right"></i></a>
-                <a href="#experience" class="btn btn-outline"><span>View My Work</span><i class="fas fa-chevron-down"></i></a>
+                <a href="Mahesh_Kumar_Konduri_Resume.docx" download class="btn btn-outline"><span>Download Resume</span><i class="fas fa-download"></i></a>
             </div>
             <div class="hero-stats">
                 <div class="stat">
@@ -598,24 +594,113 @@
             <div class="section-header">
                 <span class="section-tag">Beyond Code</span>
                 <h2 class="section-title">Life & Moments</h2>
+                <button class="gallery-toggle" id="galleryToggle" aria-expanded="false" aria-controls="galleryContent">
+                    <span>View Gallery</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item gallery-item-large">
-                    <img src="images/personal/IMG_6842.JPG" alt="Personal moment" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+            <div class="gallery-content" id="galleryContent">
+                <div class="gallery-grid">
+                    <div class="gallery-item gallery-item-large">
+                        <img src="images/personal/IMG_6842.JPG" alt="Personal moment" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/personal/7014491d-59e7-4688-a714-f4019c5bb415.JPG" alt="Personal moment" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/personal/IMG_5185.jpg" alt="Personal moment" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/personal/7014491d-59e7-4688-a714-f4019c5bb415.JPG" alt="Personal moment" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section class="section personal-projects" id="personal-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ventures</span>
+                <h2 class="section-title">Personal Projects</h2>
+            </div>
+            <div class="ventures-grid">
+                <!-- Drimaa -->
+                <div class="venture-card">
+                    <div class="venture-image">
+                        <img src="images/projects/drimaa.jpg" alt="Drimaa - Organic Palm Leaf Products" loading="lazy">
+                        <div class="venture-badge eco">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="venture-content">
+                        <h3>Drimaa</h3>
+                        <p class="venture-tagline">The Future is 100% Organic</p>
+                        <p class="venture-desc">At Drimaa, we envision a world where organic materials replace single-use plastics. Every palm leaf product is thoughtfully crafted to be durable, compostable, and environmentally responsible — inspiring homes, businesses, and communities to embrace a future powered by nature.</p>
+                        <div class="venture-tags">
+                            <span><i class="fas fa-seedling"></i> 100% Natural</span>
+                            <span><i class="fas fa-recycle"></i> Zero Waste</span>
+                            <span><i class="fas fa-globe-americas"></i> Eco Friendly</span>
+                        </div>
+                        <a href="https://drimaa.com" target="_blank" rel="noopener noreferrer" class="venture-link">
+                            <span>Visit drimaa.com</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/personal/IMG_5185.jpg" alt="Personal moment" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+
+                <!-- Hashtag Systems -->
+                <div class="venture-card">
+                    <div class="venture-image">
+                        <img src="images/projects/hashtagsystems.jpg" alt="Hashtag Systems - AI & Future Tech" loading="lazy">
+                        <div class="venture-badge tech">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="venture-content">
+                        <h3>Hashtag Systems</h3>
+                        <p class="venture-tagline">"Innovation begins with curiosity and becomes reality through engineering."</p>
+                        <p class="venture-desc">Inspired by today's groundbreaking innovations, I explore the technologies that could shape tomorrow. Focused on Artificial Intelligence, Robotics, Holographic Computing, Spatial Intelligence, and Human–AI Collaboration through research, concepts, and prototype development.</p>
+                        <div class="venture-tags">
+                            <span><i class="fas fa-robot"></i> AI Agents</span>
+                            <span><i class="fas fa-vr-cardboard"></i> Holographic</span>
+                            <span><i class="fas fa-brain"></i> Spatial AI</span>
+                        </div>
+                        <a href="https://hashtagsystemsinc.com" target="_blank" rel="noopener noreferrer" class="venture-link">
+                            <span>Visit hashtagsystemsinc.com</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BrainNest -->
+                <div class="venture-card">
+                    <div class="venture-image">
+                        <img src="images/projects/brainnest.jpg" alt="BrainNest - AI Market Intelligence" loading="lazy">
+                        <div class="venture-badge finance">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="venture-content">
+                        <h3>BrainNest</h3>
+                        <p class="venture-tagline">Research Smarter. Analyze Deeper. Invest with Confidence.</p>
+                        <p class="venture-desc">BrainNest combines Artificial Intelligence, real-time analytics, and advanced market research to deliver intelligent insights for traders and investors. Designed to simplify complex market data, it helps users research smarter, analyze deeper, and make informed decisions with confidence.</p>
+                        <div class="venture-tags">
+                            <span><i class="fas fa-signal"></i> Real-Time Analytics</span>
+                            <span><i class="fas fa-brain"></i> AI-Powered</span>
+                            <span><i class="fas fa-shield-alt"></i> Secure</span>
+                        </div>
+                        <a href="https://brainnest.link" target="_blank" rel="noopener noreferrer" class="venture-link">
+                            <span>Visit brainnest.link</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -642,8 +727,8 @@
                             <a href="mailto:mkonduri7@gmail.com">mkonduri7@gmail.com</a>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+16692648925">(669) 264-8925</a>
+                            <i class="fas fa-file-alt"></i>
+                            <a href="Mahesh_Kumar_Konduri_Resume.docx" download>Download Resume</a>
                         </div>
                     </div>
                     <div class="social-links">

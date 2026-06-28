@@ -1844,6 +1844,176 @@ body {
     border-radius: 4px;
 }
 
+/* ============ PERSONAL PROJECTS / VENTURES ============ */
+.ventures-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.venture-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+
+.venture-card:nth-child(even) {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.venture-card:nth-child(even) .venture-image {
+    order: 2;
+}
+
+.venture-card:nth-child(even) .venture-content {
+    order: 1;
+}
+
+.venture-card:hover {
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-gold-lg);
+    transform: translateY(-4px);
+}
+
+.venture-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    background: var(--bg-secondary);
+}
+
+.venture-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.6s ease;
+    padding: 12px;
+}
+
+.venture-card:hover .venture-image img {
+    transform: scale(1.05);
+}
+
+.venture-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 1rem;
+}
+
+.venture-badge.eco {
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ade80;
+}
+
+.venture-badge.tech {
+    background: rgba(99, 102, 241, 0.15);
+    color: #818cf8;
+}
+
+.venture-badge.finance {
+    background: rgba(201, 169, 110, 0.15);
+    color: var(--gold-light);
+}
+
+.venture-content {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.venture-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.venture-tagline {
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.venture-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.venture-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.venture-tags span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    background: rgba(201, 169, 110, 0.06);
+    border: 1px solid rgba(201, 169, 110, 0.15);
+    border-radius: 20px;
+    color: var(--gold-light);
+    font-weight: 500;
+}
+
+.venture-tags span i {
+    font-size: 0.7rem;
+    color: var(--gold-primary);
+}
+
+.venture-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    transition: var(--transition);
+    width: fit-content;
+}
+
+.venture-link:hover {
+    background: rgba(201, 169, 110, 0.1);
+    border-color: var(--gold-primary);
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.2);
+}
+
+.venture-link i {
+    font-size: 0.75rem;
+}
+
 /* ============ FOOTER ============ */
 .footer {
     padding: 70px 0 30px;
@@ -2181,6 +2351,27 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .venture-card,
+    .venture-card:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .venture-card:nth-child(even) .venture-image {
+        order: unset;
+    }
+
+    .venture-card:nth-child(even) .venture-content {
+        order: unset;
+    }
+
+    .venture-image {
+        min-height: 200px;
+    }
+
+    .venture-content {
+        padding: 24px;
+    }
+
     .about-highlights {
         grid-template-columns: 1fr;
     }
@@ -2358,6 +2549,54 @@ body {
 /* ============ PERSONAL GALLERY ============ */
 .personal-gallery {
     overflow: hidden;
+}
+
+.gallery-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: rgba(201, 169, 110, 0.08);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    color: var(--gold-light);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-toggle:hover {
+    background: rgba(201, 169, 110, 0.15);
+    border-color: var(--gold-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.2);
+}
+
+.gallery-toggle i {
+    font-size: 0.75rem;
+    transition: transform 0.4s ease;
+}
+
+.gallery-toggle.expanded i {
+    transform: rotate(180deg);
+}
+
+.gallery-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.4s ease, margin 0.4s ease;
+    margin-top: 0;
+}
+
+.gallery-content.open {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 40px;
 }
 
 .gallery-grid {

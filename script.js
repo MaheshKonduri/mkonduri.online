@@ -373,6 +373,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ============ GALLERY TOGGLE ============
+const galleryToggle = document.getElementById('galleryToggle');
+const galleryContent = document.getElementById('galleryContent');
+
+if (galleryToggle && galleryContent) {
+    galleryToggle.addEventListener('click', () => {
+        const isOpen = galleryContent.classList.toggle('open');
+        galleryToggle.classList.toggle('expanded');
+        galleryToggle.querySelector('span').textContent = isOpen ? 'Hide Gallery' : 'View Gallery';
+        galleryToggle.setAttribute('aria-expanded', isOpen);
+    });
+}
+
 
 // ============ IMAGE LIGHTBOX ============
 function initImageLightbox() {
