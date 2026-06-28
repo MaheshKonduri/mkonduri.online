@@ -2531,6 +2531,39 @@ body::after {
     .contact-form {
         padding: 24px;
     }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-quote {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--border-color);
+        padding-top: 12px;
+        max-width: 100%;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        align-items: center;
+    }
+
+    .hero-subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+    }
 }
 
 @media (max-width: 480px) {
