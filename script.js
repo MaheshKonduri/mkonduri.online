@@ -240,13 +240,25 @@ function initCounterAnimation() {
 // ============ SCROLL REVEAL ============
 function initScrollReveal() {
     const elements = document.querySelectorAll(
-        '.timeline-item, .skill-category, .project-showcase, .edu-card, .about-grid, .contact-grid, .achievement-card'
+        '.timeline-item, .skill-category, .project-showcase, .edu-card, .about-grid, .contact-grid, .achievement-card, .venture-card'
     );
 
-    elements.forEach((el, i) => {
+    const staggerContainers = document.querySelectorAll(
+        '.skills-grid, .projects-grid, .education-grid, .ventures-grid'
+    );
+
+    elements.forEach(el => {
         el.classList.add('reveal');
-        el.style.transitionDelay = `${(i % 3) * 0.1}s`;
     });
+
+    staggerContainers.forEach(container => {
+        container.classList.add('reveal-stagger');
+    });
+
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -60px 0px'
+    };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -254,12 +266,10 @@ function initScrollReveal() {
                 entry.target.classList.add('visible');
             }
         });
-    }, { 
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    }, observerOptions);
 
     elements.forEach(el => observer.observe(el));
+    staggerContainers.forEach(el => observer.observe(el));
 }
 
 // ============ CURSOR GLOW ============
