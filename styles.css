@@ -656,16 +656,23 @@ body::after {
 }
 
 .about-lead {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--text-primary);
-    margin-bottom: 20px;
-    line-height: 1.9;
+    margin-bottom: 24px;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
 .about-content p {
     color: var(--text-secondary);
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.about-content p strong {
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .about-highlights {
